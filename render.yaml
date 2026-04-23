@@ -1,0 +1,14 @@
+{
+  "name": "task-manager-backend",
+  "version": "1.0.0",
+  "description": "Django REST API backend",
+  "scripts": {
+    "start": "gunicorn overdue_service.wsgi"
+  },
+  "build": {
+    "python": "3.11"
+  },
+  "run": {
+    "python": "python manage.py migrate"
+  }
+}
