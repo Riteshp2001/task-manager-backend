@@ -1,1 +1,0 @@
-web: python manage.py migrate --noinput && gunicorn overdue_service.wsgi

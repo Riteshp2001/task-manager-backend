@@ -1,1 +1,1 @@
-web: gunicorn overdue_service.wsgi --log-file -
+python-3.12

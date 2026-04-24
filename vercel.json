@@ -1,4 +1,4 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "django"
+  "buildCommand": "echo \"Building...\"",
+  "devCommand": "uvicorn index:app --host 0.0.0.0 --port 8000"
 }

@@ -1,6 +1,6 @@
-# Overdue Rules Service (Django)
+# Overdue Rules Service (FastAPI)
 
-This Django app is a small secondary service. It only evaluates overdue-task rules for the Laravel API.
+This FastAPI app is the small secondary service used by the Laravel API to evaluate overdue-task rules.
 
 ## What it does
 
@@ -19,11 +19,6 @@ Both endpoints optionally accept the shared `X-Service-Key` header when `OVERDUE
 
 Copy `.env.example` values into your deployment environment:
 
-- `DJANGO_SECRET_KEY`
-- `DJANGO_DEBUG`
-- `DJANGO_ALLOWED_HOSTS`
-- `DJANGO_TIME_ZONE`
-- `CORS_ALLOWED_ORIGINS`
 - `OVERDUE_SERVICE_KEY`
 
 ## Local setup
@@ -31,14 +26,13 @@ Copy `.env.example` values into your deployment environment:
 ```bash
 python -m venv .venv
 .venv\Scripts\python -m pip install -r requirements.txt
-.venv\Scripts\python manage.py migrate
-.venv\Scripts\python manage.py runserver 9000
+.venv\Scripts\uvicorn index:app --host 127.0.0.1 --port 9000
 ```
 
-## Tests
+## Health check
 
 ```bash
-.venv\Scripts\python manage.py test rules
+GET /
 ```
 
 ## Laravel handoff
