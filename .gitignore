@@ -33,3 +33,4 @@ local_settings.py
 .coverage
 htmlcov/
 .DS_Store
+.vercel

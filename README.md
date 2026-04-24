@@ -1,6 +1,6 @@
 # Overdue Rules Service (Django)
 
-This Django app is the assignment's secondary service. It does not own projects or tasks anymore. Its only job is to evaluate overdue-task rules for the Laravel API.
+This Django app is a small secondary service. It only evaluates overdue-task rules for the Laravel API.
 
 ## What it does
 

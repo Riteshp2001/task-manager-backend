@@ -1,0 +1,7 @@
+.git
+.vercel
+.venv
+__pycache__
+db.sqlite3
+*.pyc
+*.log
